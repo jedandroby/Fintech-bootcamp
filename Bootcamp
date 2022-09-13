@@ -1,2 +1,11 @@
 # First pythonb bootcamp, lets see what i learn! 
-# lets make this different.
+# lets try a interest formula program
+i = float(input("Enter the interest rate: "))
+n = float(input("Enter number of compounding periods in a year: "))
+t = float(input("Enter number of years investing: "))
+FV =float(input("What is this investment going to be worth? "))
+#PV =float(input("What is this investment currently worth? "))
+
+#FV = PV * (1+(i/n))^(n*t)
+PV = FV / (1+(i/n))**(n*t)
+print (PV)
