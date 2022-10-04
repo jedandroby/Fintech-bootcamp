@@ -1,4 +1,6 @@
 # some notes
+import fire 
+
 # table_data = [
 #     ["Ticker", "Open", "Close"],
 #     ["AAPL", 363.25, 363.4],
@@ -43,22 +45,22 @@
 
 # trying to create a bitcoin price predictor using machine learning.
 # from this link - https://thecleverprogrammer.com/2021/12/27/cryptocurrency-price-prediction-with-machine-learning/ - 
-#seem to be getting error importing pandas and yfinance.    
-import pandas as pd
-import yfinance
-import datetime 
-from datetime import date, timedelta 
-today = date.today()
+# #seem to be getting error importing pandas and yfinance.    
+# import pandas as pd
+# import yfinance
+# import datetime 
+# from datetime import date, timedelta 
+# today = date.today()
 
-d1 = today.strftime("%Y-%m-%d")
-end_date = d1 
-d2 = date.today() - timedelta(days=360)
-d2 = d2.strftime("%Y-%m-%d")
-start_date = d2
+# d1 = today.strftime("%Y-%m-%d")
+# end_date = d1 
+# d2 = date.today() - timedelta(days=360)
+# d2 = d2.strftime("%Y-%m-%d")
+# start_date = d2
 
-data = yfinance.download('BTC-USD', start= start_date, end= end_date, progress=False)
-data ["Date"] = data.index 
-data = data [["Date", "Open", "High", "Low", "Close", "Adj Close", "Volume"]]
-data.reset_index(drop=True, inplace=True)
-print(data.head())
+# data = yfinance.download('BTC-USD', start= start_date, end= end_date, progress=False)
+# data ["Date"] = data.index 
+# data = data [["Date", "Open", "High", "Low", "Close", "Adj Close", "Volume"]]
+# data.reset_index(drop=True, inplace=True)
+# print(data.head())
 
